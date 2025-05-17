@@ -13,3 +13,12 @@ type Class struct {
  Capacity int
 }
 
+type BookingInput struct {
+ Name string `json:"name" binding:"required"`
+ Date string `json:"date" binding:"required"`
+}
+
+type Booking struct {
+ Name string
+ Date string
+}

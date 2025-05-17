@@ -6,4 +6,6 @@ import (
 
 var Classes = make(map[string]models.Class)
 
+var Bookings = make(map[string][]models.Booking)
+
 

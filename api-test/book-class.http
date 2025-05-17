@@ -1,0 +1,7 @@
+POST http://localhost:8080/bookings
+content-type: application/json
+
+{
+    "name": "Pilates",
+    "date": "2025-05-12"
+}
