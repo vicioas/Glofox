@@ -36,8 +36,10 @@ Request
 
 ```
 
-```bash
 Response
+
+```bash
+
 {
  "message": "Class created"
 }
