@@ -25,30 +25,48 @@ This is a simple in-memory REST API built using the [Gin](https://github.com/gin
 
 Request
 
+```bash
+
 {
  "name": "Pilates",
  "start": "2025-06-01",
  "end": "2025-06-10",
  "capacity": 10
 }
+
+```
+
+```bash
 Response
 {
  "message": "Class created"
 }
 
+```
+
 ### /bookings
 
 Request 
+
+```bash
 
 {
  "name": "Alice",
  "date": "2025-06-01"
 }
 
+```
+
 Response
+
+```bash
+
 {
  "message": "Booking successful"
 }
+
+```
+
 ## Getting Started
 
 ### 1. Clone the repo
