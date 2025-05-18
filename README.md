@@ -15,9 +15,40 @@ This is a simple in-memory REST API built using the [Gin](https://github.com/gin
 
 - Go 1.18+
 - curl or Postman for API testing
+- Alternatively you can install the REST Client extension on VSCode and test the api using the files in the api-test folder
 
 ---
 
+## API Endpoints
+
+### /classes
+
+Request
+
+{
+ "name": "Pilates",
+ "start": "2025-06-01",
+ "end": "2025-06-10",
+ "capacity": 10
+}
+Response
+{
+ "message": "Class created"
+}
+
+### /bookings
+
+Request 
+
+{
+ "name": "Alice",
+ "date": "2025-06-01"
+}
+
+Response
+{
+ "message": "Booking successful"
+}
 ## Getting Started
 
 ### 1. Clone the repo
@@ -27,3 +58,30 @@ git clone https://github.com/vicioas/Glofox.git
 cd Glofox
 go mod tidy
 go run main.go
+
+```
+
+### 2. Test the endpoints
+
+You can just click on the send request button on the files in the api-test folder if you have the REST Client extension installed or you can run the following curl commands.
+
+```bash
+curl -X POST http://localhost:8080/classes \
+ -H "Content-Type: application/json" \
+ -d '{
+ "name": "Pilates",
+ "start": "2025-06-01",
+ "end": "2025-06-05",
+ "capacity": 10
+}'
+
+
+curl -X POST http://localhost:8080/bookings \
+ -H "Content-Type: application/json" \
+ -d '{
+ "name": "Alice",
+ "date": "2025-06-02"
+}'
+
+```
+
